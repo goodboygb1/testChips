@@ -11,7 +11,7 @@ import MaterialComponents.MaterialTextFields
 import MaterialComponents.MaterialContainerScheme
 
 
-class ViewController: UIViewController, UITextFieldDelegate, MDCChipFieldDelegate, UITextFieldDelegate{
+class ViewController: UIViewController, UITextFieldDelegate, MDCChipFieldDelegate {
 
     var containerScheming = MDCContainerScheme()
     var chipField: MDCChipField!
@@ -74,5 +74,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MDCChipFieldDelegat
         chipView.setTitleColor(UIColor.red, for: .selected)
         chipView.sizeToFit()
         textField.addSubview(chipView)
+        textField.endEditing(true)
+        return true
     }
 }
